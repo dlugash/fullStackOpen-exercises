@@ -4,7 +4,7 @@ sequenceDiagram
     participant server
 
     Note right of browser:*clicking SAVE button*
-    browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
+    browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note, {"note": "Best ratatouille recipe"}
     activate server
     server-->>browser: server responds with 302 Status Code (redirect to /exampleapp/notes)
     deactivate server
