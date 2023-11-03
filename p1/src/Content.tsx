@@ -1,9 +1,17 @@
 import React from "react";
 import Part from "./Part";
 
-interface ContentProps { id: number, exercises: number, name: string }[];
+interface Course {
+  id: number;
+  exercises: number;
+  name: string
+};
 
-const Content = ({ parts }: ContentProps) => {  
+interface ContentProps {
+  parts: Course[]
+};
+
+const Content : React.FC<ContentProps> = ({ parts }) => {
   return (
     <div>
       {parts.map(part => 
